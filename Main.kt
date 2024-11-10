@@ -24,7 +24,6 @@ fun generar(longitud: Int): MutableMap<Int, Int> {
 fun main() {
 
     //Colores
-
     val BG_RED = "\u001B[41m"
     val BG_GREEN = "\u001B[42m"
     val BG_YELLOW = "\u001B[43m"
@@ -70,10 +69,11 @@ fun main() {
                             continue
                         }
                     }
-                    if (entrada.contains(vnum1)) { contadorcoin++ }
-                    if (entrada.contains(vnum2)) { contadorcoin++ }
-                    if (entrada.contains(vnum3)) { contadorcoin++ }
-                    if (entrada.contains(vnum4)) { contadorcoin++ }
+                    for (i in 0 until 4) {
+                        if (entrada.contains(numsec[i])) {
+                            contadorcoin++
+                        }
+                    }
 
                     if (contadorcar==4) {
                         println("${BG_GREEN}${BLACK}¡Lo has adivinado!${RESET}")
@@ -114,14 +114,7 @@ fun main() {
             eleccion= readln()
         }
 
-        //Eleccion 4: Borrado
-        else if (eleccion == "4") {
-            println()
-            println("Gracias por jugar")
-            break
-        }
-            
-        //Eleccion 5: Repite
+        //Eleccion 4: Repite
         else {
             println()
             println("${BG_RED}${BLACK}numero invalido, escribe un numero del 1 al 3${RESET}")
