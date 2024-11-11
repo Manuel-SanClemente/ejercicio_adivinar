@@ -38,8 +38,7 @@ fun main() {
     //Opciones
     println("${GREEN}1. Jugar")
     println("2. Ver traza de último intento")
-    println("3. Borrar lo contenido en la traza hasta ahora")
-    println("4. Salir${RESET}")
+    println("3. Borrar lo contenido en la traza hasta ahora${RESET}")
     print("opción: ")
     var eleccion= readlnOrNull()
 
